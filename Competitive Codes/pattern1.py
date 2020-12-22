@@ -1,4 +1,6 @@
 def grid(somelist):
+    '''by using nested loop for list of lists
+It creates pattern in the list'''
     j = 0
     while j < 6:
         a = ""
@@ -24,3 +26,10 @@ Grid = [
 ]
 
 content = grid(Grid)
+#returns
+#..00.00..
+#.0000000.
+#.0000000.
+#..00000..
+#...000...
+#....0....
