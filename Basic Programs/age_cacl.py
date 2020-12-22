@@ -27,6 +27,9 @@ while True:
     try:
         print("Enter your 'Day Of Birth'")
         dob = int(input())
+    #did this to make sure that in months with 31 days user won't 
+    #enter 31+ and in months of 30 days,user won't enter 30+ 
+     #likewise in all cases!
         if mob == 1 or mob == 3 or mob == 5 or mob == 7 or mob == 8 or mob == 10 or mob == 12:
             if dob<1 or dob>31:
                 print("Out of range.!")
@@ -39,7 +42,10 @@ while True:
                 continue
             else:
                 break
-
+      ##for leap years! 
+     # year 2000 is a leap year so every 4 year after it
+     # is also a leap year
+    #here,if not leap year is concerned..
         elif (yob - 2000) // 4 != 0:
             if dob < 1 or dob > 28:
                 print("Out of range.!")
@@ -63,7 +69,7 @@ while True:
     except Exception as e:
         print("Please follow the rules.")
         continue
-
+#calculating age with fun!
 if (wyr - yob) < 0:
     print("Lmao,You have not been born yet.!")
 elif (wyr - yob) == 0:
