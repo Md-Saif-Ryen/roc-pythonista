@@ -9,10 +9,14 @@ import random
 
 def random_str(user_str):
     """This function will produce a random string of same lenght as the user Enter"""
+     #generated string
     gen_str = ''
+    #all alpha char with white space
     char = ' abcdefghijklmnopqrstuvwxyz'
     for i in range(len(user_str)):
+      #picking a random character from alpha char
         cha = char[random.randrange(27)]
+   #adding character to generated string
         gen_str += cha
     return gen_str
 
@@ -27,8 +31,10 @@ def check_str(user_str, gen_str):
 def main(user_str):
     """This function runs the above two funcitons and return the number of times
     that monkey hit the keyboard to randomly get the user string"""
+    #score of monkey 
     scr = 0
     while True:
+     #getting a random generated string
         gen_str = random_str(user_str)
         # print(f'{gen_str} ---->> Monkey hitting key-board >>> {scr} times')
         if check_str(user_str, gen_str):
